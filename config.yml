@@ -8,7 +8,7 @@
 # Port the server should listen to
 # ---------------------------------------------------------------------
 
-port: 3000
+port: 6969
 
 # ---------------------------------------------------------------------
 # Database
@@ -21,14 +21,14 @@ port: 3000
 # - sqlite = SQLite 3.9 or later
 
 db:
-  type: postgres
+  type: mariadb
 
   # PostgreSQL / MySQL / MariaDB / MS SQL Server only:
   host: localhost
-  port: 5432
-  user: wikijs
-  pass: wikijsrocks
-  db: wiki
+  port: 3306
+  user: wiki
+  pass: vue1212A@
+  db: s_wiki
   ssl: false
 
   # Optional - PostgreSQL / MySQL / MariaDB only:
@@ -61,11 +61,11 @@ db:
 # advanced options than those provided below.
 
 ssl:
-  enabled: false
+  enabled: true
   port: 3443
 
   # Provider to use, possible values: custom, letsencrypt
-  provider: custom
+  provider: letsencrypt
 
   # ++++++ For custom only ++++++
   # Certificate format, either 'pem' or 'pfx':
@@ -82,8 +82,8 @@ ssl:
   dhparam: null
 
   # ++++++ For letsencrypt only ++++++
-  domain: wiki.yourdomain.com
-  subscriberEmail: admin@example.com
+  domain: wiki.selvania.fr
+  subscriberEmail: led0ck@selvania.fr
 
 # ---------------------------------------------------------------------
 # Database Pool Options
@@ -106,7 +106,7 @@ bindIP: 0.0.0.0
 # ---------------------------------------------------------------------
 # Possible values: error, warn, info (default), verbose, debug, silly
 
-logLevel: info
+logLevel: debug
 
 # ---------------------------------------------------------------------
 # Log Format
